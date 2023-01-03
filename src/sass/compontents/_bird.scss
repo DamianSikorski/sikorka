@@ -1,0 +1,180 @@
+.birds-wrapper {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 600px;
+  left: 50%;
+  margin-left: -150px;
+}
+
+.bird {
+  display: block;
+  width: 100px;
+  height: 150px;
+  background-color: rgb(255, 0, 0);
+  margin-left: 25px;
+  border-radius: 50px 50px 100px 0;
+  transform: rotateZ(30deg);
+  position: relative;
+  animation: fly-in 5s;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-left: 25px solid #ffca00;
+    transform: rotatez(-30deg);
+    right: -29px;
+    top: 2px;
+  }
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 90px;
+    background-color: #d30000;
+    border-radius: 50px 50px 100px 0;
+    transform: rotatez(90deg);
+    left: -20px;
+    top: 40px;
+    animation: flap2 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+  }
+  .eye {
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+  }
+}
+
+.bird2-container {
+  animation: fly-in2 5s;
+}
+
+.bird2 {
+  transform: rotate(-15deg) scale(0.7);
+  animation-name: flutter;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  margin-left: 20px;
+}
+
+.bird2-beak1 {
+  margin-top: -55px;
+  margin-left: -10px;
+  border-radius: 50% 0% 0% 20%;
+  background-color: orange;
+  height: 40px;
+  width: 40px;
+}
+.bird2-beak2 {
+  border-radius: 00% 0% 0% 30%;
+  background-color: darkorange;
+  height: 40px;
+  width: 40px;
+}
+
+.bird2-body {
+  margin-top: -85px;
+  margin-left: 20px;
+  border-radius: 48% 52% 48% 52% / 39% 35% 65% 61%;
+  background-color: dodgerblue;
+  height: 200px;
+  width: 150px;
+}
+.bird2-eye {
+  margin-top: -165px;
+  margin-left: 55px;
+  background-color: snow;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.bird2-pupil {
+  margin-top: -17px;
+  margin-left: 55px;
+  background-color: gray;
+  width: 15px;
+  height: 17px;
+  border-radius: 50%;
+  top: 10px;
+}
+
+.bird2-wing {
+  margin-top: 0px;
+  margin-left: 60px;
+  width: 150px;
+  height: 150px;
+  background-color: deepskyblue;
+  border-radius: 38% 62% 6% 94% / 26% 75% 25% 74%;
+  /*   transform: rotate(5deg); */
+  transform-origin: top left;
+  animation: flap 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+.bird2-hair {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  position: absolute;
+  margin-top: -85px;
+  margin-left: 115px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 5px 10px 0px 0px dodgerblue;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+@keyframes flap2 {
+  from {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(60deg);
+  }
+}
+
+@keyframes flap {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(12deg);
+  }
+}
+
+@keyframes fly-in {
+  0% {
+    transform: translateX(-210%) translateY(-100%) rotateZ(30deg);
+  }
+  100% {
+    transform: translateX(0%) translateY(0%) rotateZ(30deg);
+  }
+}
+
+@keyframes fly-in2 {
+  0% {
+    transform: translateX(210%) translateY(-100%);
+  }
+  100% {
+    transform: translateX(0%) translateY(0%);
+  }
+}

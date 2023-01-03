@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  -webkit-tap-highlight-color: transparent;
+}
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  // font-family: "Roboto Condensed", sans-serif;
+  font-family: "Pacifico", cursive;
+  letter-spacing: 2px;
+  background-color: $colorOne;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+address {
+  font-style: normal;
+}
+:focus {
+  outline: none;
+}
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}

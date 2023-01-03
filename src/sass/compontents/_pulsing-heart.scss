@@ -1,0 +1,63 @@
+.wrapper {
+  animation: pulse 1.4s infinite;
+  margin-top: 70px;
+  max-width: 330px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+}
+
+.heart {
+  height: 70px;
+  width: 50px;
+  margin: auto;
+  background-color: $colorSix;
+  border-radius: 50px 50px 0 0;
+
+  position: relative;
+  animation: shadow 1.4s infinite;
+  transform: scale(1.8) rotate(50deg);
+}
+
+.heart::after {
+  position: absolute;
+  top: 17px;
+  left: -14px;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background-color: inherit;
+  border-radius: inherit;
+  transform: rotate(-100deg);
+  animation: shadow 1.4s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: 0 0 0 0 $colorSix;
+  }
+  50% {
+    box-shadow: 0 0 5px 0 $colorSix;
+  }
+  70% {
+    box-shadow: 0 0 10px 5px $colorSix;
+  }
+  95% {
+    box-shadow: 0 0 90px 1px $colorSix;
+  }
+}
