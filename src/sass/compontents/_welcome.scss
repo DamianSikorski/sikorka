@@ -1,0 +1,32 @@
+.welcome {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $colorTwo;
+  z-index: 10;
+  transition: 2s;
+  &__content {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 36px;
+    padding: 0px 15px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__img {
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+  }
+}
+.clicked {
+  opacity: 0;
+}
+.unclickable {
+  pointer-events: none;
+}

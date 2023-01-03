@@ -37,7 +37,8 @@ const writeLoop = async () => {
 
 writeLoop();
 
-document.addEventListener(
-  "mousemove",
-  document.getElementById("mySound").play()
-);
+// function playMusic() {
+//   let audio = new Audio("/images/water.mp3");
+//   audio.play();
+// }
+// playMusic();

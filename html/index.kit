@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,6 +28,11 @@
       </div>
     </header>
     <main>
+      <section class="welcome">
+        <p class="welcome__content">Kliknij buzi bo nie wejdziesz!</p>
+        <img src="./images/serce.png" alt="serce" class="welcome__img" />
+      </section>
+
       <section class="section">
         <div class="birds-wrapper">
           <div class="bird">
@@ -47,16 +52,12 @@
           </div>
         </div>
       </section>
+      <section>
+        <div class="gallery"></div>
+      </section>
     </main>
-    <embed
-      src="/images/water.mp3"
-      loop="true"
-      autostart="true"
-      width="2"
-      height="0"
-    />
-    <!-- <audio id="mySound" controls src="/images/water.mp3"></audio> -->
 
     <script src="./src/js/typing-animation.js"></script>
+    <script src="./src/js/popup.js"></script>
   </body>
 </html>
