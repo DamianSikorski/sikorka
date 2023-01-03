@@ -3,8 +3,12 @@
   justify-content: center;
   position: absolute;
   top: 600px;
-  left: 50%;
-  margin-left: -150px;
+  left: 50px;
+  height: 200px;
+  overflow: hidden;
+}
+.bird-wrapper-clicked {
+  overflow: visible;
 }
 
 .bird {
@@ -14,9 +18,9 @@
   background-color: rgb(255, 0, 0);
   margin-left: 25px;
   border-radius: 50px 50px 100px 0;
-  transform: rotateZ(30deg);
+  transform: translateX(-210%) translateY(-100%) rotateZ(30deg);
   position: relative;
-  animation: fly-in 5s;
+  transition: 2s;
 
   &:before {
     content: "";
@@ -56,9 +60,17 @@
     right: 30px;
   }
 }
+.fly-in {
+  transform: translateX(0%) translateY(0%) rotateZ(30deg);
+}
 
 .bird2-container {
+  transform: translateX(210%) translateY(-100%);
+  transition: 2s;
+}
+.fly-in2 {
   animation: fly-in2 5s;
+  transform: translateX(0%) translateY(0%);
 }
 
 .bird2 {
@@ -158,23 +170,5 @@
   }
   to {
     transform: rotate(12deg);
-  }
-}
-
-@keyframes fly-in {
-  0% {
-    transform: translateX(-210%) translateY(-100%) rotateZ(30deg);
-  }
-  100% {
-    transform: translateX(0%) translateY(0%) rotateZ(30deg);
-  }
-}
-
-@keyframes fly-in2 {
-  0% {
-    transform: translateX(210%) translateY(-100%);
-  }
-  100% {
-    transform: translateX(0%) translateY(0%);
   }
 }

@@ -2,7 +2,13 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const phrases = ["Sylwuś !", "Sikorko moja !", "Nie bądź już zła proszę !"];
+const phrases = [
+  "Sylwuś !",
+  "Sikorko moja !",
+  "Nie bądź już zła proszę !",
+  "Jesteś silną niezależną kobietą!",
+  "<3",
+];
 const el = document.getElementById("typewriter");
 
 let sleepTime = 100;
